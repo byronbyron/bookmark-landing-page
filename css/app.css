@@ -20444,8 +20444,7 @@ video {
 }
 
 .text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
+  font-size: 2rem;
 }
 
 .text-5xl {
@@ -27811,6 +27810,19 @@ body {
   min-width: 375px;
 }
 
+p {
+  font-size: 0.9375rem;
+  --tw-text-opacity: 1;
+  color: hsla(229, 8%, 60%, var(--tw-text-opacity));
+}
+
+@media (min-width: 768px) {
+  p {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+
 .hero-shape {
   position: relative;
 }
@@ -27855,6 +27867,108 @@ body {
 .hero-shape img {
   position: relative;
   z-index: 1;
+}
+
+.title {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  --tw-text-opacity: 1;
+  color: hsla(229, 31%, 21%, var(--tw-text-opacity));
+  font-weight: 500;
+  line-height: 1.375;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 3rem;
+    line-height: 1;
+  }
+}
+
+@media (min-width: 768px) {
+  .title {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.title-sub {
+  font-size: 2rem;
+  --tw-text-opacity: 1;
+  color: hsla(229, 31%, 21%, var(--tw-text-opacity));
+  font-weight: 500;
+  line-height: 1.375;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+@media (min-width: 768px) {
+  .title-sub {
+    margin-top: 0px;
+  }
+}
+
+@media (min-width: 768px) {
+  .title-sub {
+    margin-bottom: 1rem;
+  }
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 768px) {
+  .btn {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+.btn {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-width: 2px;
+  border-color: transparent;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  border-radius: 0.25rem;
+}
+
+.btn-primary {
+  --tw-text-opacity: 1;
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
+  --tw-bg-opacity: 1;
+  background-color: hsla(231, 69%, 60%, var(--tw-bg-opacity));
+}
+
+.btn-primary:hover, .btn-primary:focus {
+  --tw-text-opacity: 1;
+  color: hsla(231, 69%, 60%, var(--tw-text-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+  --tw-border-opacity: 1;
+  border-color: hsla(231, 69%, 60%, var(--tw-border-opacity));
+}
+
+.btn-secondary {
+  --tw-text-opacity: 1;
+  color: hsla(229, 31%, 21%, var(--tw-text-opacity));
+  --tw-bg-opacity: 1;
+  background-color: hsla(229, 8%, 60%, var(--tw-bg-opacity));
+  --tw-bg-opacity: 0.1;
+}
+
+.btn-secondary:hover, .btn-secondary:focus {
+  --tw-bg-opacity: 1;
+  background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+  --tw-border-opacity: 1;
+  border-color: hsla(229, 31%, 21%, var(--tw-border-opacity));
 }
 
 .btn-shadow {
@@ -47675,8 +47789,7 @@ body {
   }
 
   .sm\:text-4xl {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
+    font-size: 2rem;
   }
 
   .sm\:text-5xl {
@@ -74828,8 +74941,7 @@ body {
   }
 
   .md\:text-4xl {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
+    font-size: 2rem;
   }
 
   .md\:text-5xl {
@@ -101981,8 +102093,7 @@ body {
   }
 
   .lg\:text-4xl {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
+    font-size: 2rem;
   }
 
   .lg\:text-5xl {
@@ -129134,8 +129245,7 @@ body {
   }
 
   .xl\:text-4xl {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
+    font-size: 2rem;
   }
 
   .xl\:text-5xl {
@@ -156287,8 +156397,7 @@ body {
   }
 
   .\32xl\:text-4xl {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
+    font-size: 2rem;
   }
 
   .\32xl\:text-5xl {

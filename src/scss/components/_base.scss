@@ -5,6 +5,12 @@ body {
     min-width: 375px;
 }
 
+p {
+    @apply text-md;
+    @apply text-gray;
+    @apply md:text-lg;
+}
+
 .hero-shape {
     position: relative;
 
@@ -42,6 +48,65 @@ body {
     img {
         position: relative;
         z-index: 1;
+    }
+}
+
+.title {
+    @apply text-3xl;
+    @apply text-dark;
+    @apply font-medium;
+    @apply leading-snug;
+    @apply mb-4;
+    @apply md:text-5xl;
+    @apply md:mb-6;
+}
+
+.title-sub {
+    @apply text-4xl;
+    @apply text-dark;
+    @apply font-medium;
+    @apply leading-snug;
+    @apply mt-6;
+    @apply mb-3;
+    @apply md:mt-0;
+    @apply md:mb-4;
+}
+
+.btn {
+    @apply inline-flex;
+    @apply items-center;
+    @apply justify-center;
+    @apply px-4;
+    @apply md:px-6;
+    @apply py-3;
+    @apply border-2;
+    @apply border-transparent;
+    @apply text-sm;
+    @apply font-medium;
+    @apply rounded;
+}
+
+.btn-primary {
+    @apply text-white;
+    @apply bg-blue;
+
+    &:hover,
+    &:focus {
+        @apply text-blue;
+        @apply bg-white;
+        @apply border-blue;
+    }
+}
+
+.btn-secondary {
+    @apply text-dark;
+    @apply bg-gray;
+    @apply bg-opacity-10;
+    
+    &:hover,
+    &:focus {
+        @apply bg-white;
+        @apply border-dark;
     }
 }
 
