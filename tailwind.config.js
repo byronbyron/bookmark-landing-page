@@ -19,6 +19,7 @@ module.exports = {
       fontSize: {
       },
       spacing: {
+        '26': '6.5rem',
       },
       borderRadius: {
       }
