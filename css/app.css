@@ -27833,6 +27833,10 @@ body {
   z-index: 1;
 }
 
+.btn-shadow {
+  box-shadow: 0 6px 10px -5px rgba(83, 104, 213, 0.4);
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
