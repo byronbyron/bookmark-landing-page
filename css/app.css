@@ -27823,50 +27823,75 @@ p {
   }
 }
 
+.container {
+  max-width: 72rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
 .hero-shape {
   position: relative;
+  max-width: 24rem;
+}
+
+@media (min-width: 1024px) {
+  .hero-shape {
+    max-width: 36rem;
+  }
+}
+
+.hero-shape {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 4rem;
 }
 
 @media (min-width: 768px) {
   .hero-shape {
-    position: static;
+    margin-bottom: 0px;
   }
 }
 
 .hero-shape::before {
   content: "";
   display: block;
-  width: 87%;
-  height: 81%;
+  width: 500px;
+  height: 200px;
   background-color: hsl(231, 69%, 60%);
-  border-radius: 35% 0% 0% 35%/50% 0% 0% 50%;
+  border-radius: 100px 0 0 100px;
   position: absolute;
-  bottom: -8px;
-  right: -12px;
+  bottom: -1rem;
+  left: 35%;
   z-index: 0;
-}
-
-@media (min-width: 768px) {
-  .hero-shape::before {
-    width: 36%;
-    height: 50%;
-    bottom: 15%;
-    border-radius: 40% 0% 0% 40%/50% 0% 0% 50%;
-  }
 }
 
 @media (min-width: 1024px) {
   .hero-shape::before {
-    width: 38%;
-    height: 57%;
-    bottom: 8%;
-    border-radius: 30% 0% 0% 30%/50% 0% 0% 50%;
+    width: 1500px;
+    height: 350px;
+    border-radius: 350px 0 0 350px;
+    bottom: -2rem;
   }
 }
 
 .hero-shape img {
   position: relative;
   z-index: 1;
+}
+
+@media (min-width: 768px) {
+  .hero-shape img {
+    min-width: 125%;
+  }
 }
 
 .title {

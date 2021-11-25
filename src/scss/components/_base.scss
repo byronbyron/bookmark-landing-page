@@ -11,43 +11,48 @@ p {
     @apply md:text-lg;
 }
 
-.hero-shape {
-    position: relative;
+.container {
+    @apply max-w-6xl;
+    @apply mx-auto;
+    @apply px-4;
+    @apply md:px-8;
+}
 
-    @media (min-width: 768px) {
-        position: static;
-    }
+.hero-shape {
+    @apply relative;
+    @apply max-w-sm;
+    @apply lg:max-w-xl;
+    @apply mx-auto;
+    @apply mb-16;
+    @apply md:mb-0;
 
     &::before {
         content: "";
         display: block;
-        width: 87%;
-        height: 81%;
+        width: 500px;
+        height: 200px;
         background-color: theme('colors.blue');
-        border-radius: 35% 0% 0% 35%/50% 0% 0% 50%;
+        border-radius: 100px 0 0 100px;
         position: absolute;
-        bottom: -8px;
-        right: -12px;
+        bottom: -1rem;
+        left: 35%;
         z-index: 0;
 
-        @media (min-width: 768px) {
-            width: 36%;
-            height: 50%;
-            bottom: 15%;
-            border-radius: 40% 0% 0% 40%/50% 0% 0% 50%;
-        }
-
         @media (min-width: 1024px) {
-            width: 38%;
-            height: 57%;
-            bottom: 8%;
-            border-radius: 30% 0% 0% 30%/50% 0% 0% 50%;
+            width: 1500px;
+            height: 350px;
+            border-radius: 350px 0 0 350px;
+            bottom: -2rem;
         }
     }
 
     img {
-        position: relative;
+        @apply relative;
         z-index: 1;
+
+        @media (min-width: 768px) {
+            min-width: 125%;
+        }
     }
 }
 
