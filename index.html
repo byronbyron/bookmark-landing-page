@@ -26,18 +26,18 @@
     <div x-data="{ open: false }">
       <nav class="bg-white">
         <div class="max-w-6xl mx-auto px-8">
-          <div class="relative flex items-center justify-between h-26 lg:h-auto">
-            <div class="flex items-center w-full mt-1">
+          <div class="relative flex items-center justify-between h-26 md:h-auto">
+            <div class="flex items-center w-full pt-1">
               <a class="flex-shrink-0 mr-auto" href="./">
                 <img src="./images/logo-bookmark.svg" alt="Bookmark">
               </a>
-              <div class="flex lg:hidden">
+              <div class="flex md:hidden">
                 <button class="text-dark p-6 -mr-6 focus:outline-none" @click="open = true">
                   <span class="sr-only">Menu</span><svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="18" height="15"><path d="M0 0h18v3H0V0zm0 6h18v3H0V6zm0 6h18v3H0v-3z"/></svg>
                 </button>
               </div>
 
-              <div class="hidden lg:block">
+              <div class="hidden md:block">
                 <div class="ml-10 flex items-baseline space-x-7">
                   <a class="text-sm text-dark tracking-widest px-3 py-11 uppercase hover:text-red transition" href="#">
                     Features
@@ -48,7 +48,7 @@
                   <a class="text-sm text-dark tracking-widest px-3 py-11 uppercase hover:text-red transition" href="#">
                     Contact
                   </a>
-                  <a class="text-sm tracking-widest px-8 py-3 uppercase leading-none rounded border-2 border-red bg-red text-white hover:bg-white hover:text-red transition" href="#">
+                  <a class="text-sm font-medium tracking-widest px-8 py-3 uppercase leading-none rounded border-2 border-red bg-red text-white hover:bg-white hover:text-red transition" href="#">
                     Login
                   </a>
                 </div>
@@ -57,15 +57,15 @@
           </div>
         </div>
 
-        <div class="lg:hidden">
+        <div class="md:hidden">
           <div class="flex flex-col w-full h-full bg-dark bg-opacity-95 fixed top-0 left-0 z-50 px-8" x-cloak x-show="open" x-transition.opacity>
-            <div class="relative flex items-center justify-between h-26 lg:h-auto">
-              <div class="flex items-center w-full mt-1">
+            <div class="relative flex items-center justify-between h-26 md:h-auto">
+              <div class="flex items-center w-full pt-1">
                 <a class="flex-shrink-0 mr-auto" href="./">
                   <img src="./images/logo-bookmark-white.svg" alt="Bookmark">
                 </a>
 
-                <div class="flex lg:hidden">
+                <div class="flex md:hidden">
                   <button class="text-white p-6 -mr-6 focus:outline-none" @click="open = false">
                     <span class="sr-only">Close</span><svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="16" height="15"><path d="M8 5.379L13.303.075l2.122 2.122L10.12 7.5l5.304 5.303-2.122 2.122L8 9.62l-5.303 5.304-2.122-2.122L5.88 7.5.575 2.197 2.697.075 8 5.38z"/></svg>
                   </button>
@@ -150,12 +150,28 @@
         </div>
       </div>
 
+      Simple Bookmarking
+      Speedy Searching
+      Easy Sharing
+
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Home</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Contact</button>
+        </li>
+      </ul>
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>
+        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+      </div>
 
     </section>
-
-    Simple Bookmarking
-    Speedy Searching
-    Easy Sharing
 
     Bookmark in one click
 

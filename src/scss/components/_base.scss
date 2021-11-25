@@ -3,6 +3,7 @@ body {
     font-size: 1rem;
     line-height: 1.65;
     min-width: 375px;
+    overflow-x: hidden;
 }
 
 p {
@@ -29,19 +30,19 @@ p {
     &::before {
         content: "";
         display: block;
-        width: 500px;
-        height: 200px;
+        width: 31.25rem;
+        height: 12.5rem;
         background-color: theme('colors.blue');
-        border-radius: 100px 0 0 100px;
+        border-radius: 6.25rem 0 0 6.25rem;
         position: absolute;
         bottom: -1rem;
         left: 35%;
         z-index: 0;
 
         @media (min-width: 1024px) {
-            width: 1500px;
-            height: 350px;
-            border-radius: 350px 0 0 350px;
+            width: 94rem;
+            height: 22rem;
+            border-radius: 22rem 0 0 22rem;
             bottom: -2rem;
         }
     }
@@ -89,6 +90,7 @@ p {
     @apply text-sm;
     @apply font-medium;
     @apply rounded;
+    @apply transition;
 }
 
 .btn-primary {
