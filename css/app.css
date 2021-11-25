@@ -20473,6 +20473,10 @@ video {
   line-height: 1;
 }
 
+.text-md {
+  font-size: 0.9375rem;
+}
+
 .font-thin {
   font-weight: 100;
 }
@@ -27803,8 +27807,30 @@ video {
 body {
   font-family: "Rubik", sans-serif;
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.65;
   min-width: 375px;
+}
+
+.hero-shape {
+  position: relative;
+}
+
+.hero-shape::before {
+  content: "";
+  display: block;
+  width: 87%;
+  height: 81%;
+  background-color: hsl(231, 69%, 60%);
+  border-radius: 35% 0% 0% 35%/50% 0% 0% 50%;
+  position: absolute;
+  bottom: -8px;
+  right: -12px;
+  z-index: 0;
+}
+
+.hero-shape img {
+  position: relative;
+  z-index: 1;
 }
 
 .attribution {
@@ -47648,6 +47674,10 @@ body {
   .sm\:text-9xl {
     font-size: 8rem;
     line-height: 1;
+  }
+
+  .sm\:text-md {
+    font-size: 0.9375rem;
   }
 
   .sm\:font-thin {
@@ -74799,6 +74829,10 @@ body {
     line-height: 1;
   }
 
+  .md\:text-md {
+    font-size: 0.9375rem;
+  }
+
   .md\:font-thin {
     font-weight: 100;
   }
@@ -101946,6 +101980,10 @@ body {
   .lg\:text-9xl {
     font-size: 8rem;
     line-height: 1;
+  }
+
+  .lg\:text-md {
+    font-size: 0.9375rem;
   }
 
   .lg\:font-thin {
@@ -129097,6 +129135,10 @@ body {
     line-height: 1;
   }
 
+  .xl\:text-md {
+    font-size: 0.9375rem;
+  }
+
   .xl\:font-thin {
     font-weight: 100;
   }
@@ -156244,6 +156286,10 @@ body {
   .\32xl\:text-9xl {
     font-size: 8rem;
     line-height: 1;
+  }
+
+  .\32xl\:text-md {
+    font-size: 0.9375rem;
   }
 
   .\32xl\:font-thin {

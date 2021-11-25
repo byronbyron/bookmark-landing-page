@@ -23,89 +23,127 @@
 </head>
 <body>
   <header>
-      <div x-data="{ open: false }">
-          <nav class="bg-white">
-              <div class="max-w-6xl mx-auto px-4 lg:px-6">
-                  <div class="relative flex items-center justify-between h-26 lg:h-auto">
-                      <div class="flex items-center w-full">
-                          <a class="flex-shrink-0 mr-auto" href="./">
-                              <img src="./images/logo-bookmark.svg" alt="Bookmark">
-                          </a>
-
-                          <div class="flex lg:hidden">
-                              <button class="text-dark p-4 focus:outline-none" @click="open = true">
-                                  <span class="sr-only">Menu</span><svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="18" height="15"><path d="M0 0h18v3H0V0zm0 6h18v3H0V6zm0 6h18v3H0v-3z"/></svg>
-                              </button>
-                          </div>
-
-                          <div class="hidden lg:block">
-                              <div class="ml-10 flex items-baseline space-x-4">
-                                  <a class="text-sm text-dark tracking-widest px-3 py-11 uppercase hover:text-red" href="#">
-                                      Features
-                                  </a>
-                                  <a class="text-sm text-dark tracking-widest px-3 py-11 uppercase hover:text-red" href="#">
-                                      Pricing
-                                  </a>
-                                  <a class="text-sm text-dark tracking-widest px-3 py-11 uppercase hover:text-red" href="#">
-                                      Contact
-                                  </a>
-                                  <a class="text-sm text-dark tracking-widest px-3 py-11 uppercase hover:text-red" href="#">
-                                      Login
-                                  </a>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
+    <div x-data="{ open: false }">
+      <nav class="bg-white">
+        <div class="max-w-6xl mx-auto px-8">
+          <div class="relative flex items-center justify-between h-26 lg:h-auto">
+            <div class="flex items-center w-full mt-1">
+              <a class="flex-shrink-0 mr-auto" href="./">
+                <img src="./images/logo-bookmark.svg" alt="Bookmark">
+              </a>
+              <div class="flex lg:hidden">
+                <button class="text-dark p-6 -mr-6 focus:outline-none" @click="open = true">
+                  <span class="sr-only">Menu</span><svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="18" height="15"><path d="M0 0h18v3H0V0zm0 6h18v3H0V6zm0 6h18v3H0v-3z"/></svg>
+                </button>
               </div>
 
-              <div class="lg:hidden">
-                  <div class="w-full h-full bg-dark fixed top-0 left-0 z-50 px-4 lg:px-6" x-cloak x-show="open">
-                      <div class="relative flex items-center justify-between h-26 lg:h-auto">
-                          <div class="flex items-center w-full">
-                              <a class="flex-shrink-0 mr-auto" href="./">
-                                  <img src="./images/logo-bookmark-white.svg" alt="Bookmark">
-                              </a>
-
-                              <div class="flex lg:hidden">
-                                  <button class="text-white p-4 focus:outline-none" @click="open = false">
-                                      <span class="sr-only">Close</span><svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="16" height="15"><path d="M8 5.379L13.303.075l2.122 2.122L10.12 7.5l5.304 5.303-2.122 2.122L8 9.62l-5.303 5.304-2.122-2.122L5.88 7.5.575 2.197 2.697.075 8 5.38z"/></svg>
-                                  </button>
-                              </div>
-                          </div>
-                      </div>
-
-                      <a class="text-lg text-white text-center uppercase block p-4" href="#">
-                          Features
-                      </a>
-                      <a class="text-lg text-white text-center uppercase block p-4" href="#">
-                          Pricing
-                      </a>
-                      <a class="text-lg text-white text-center uppercase block p-4" href="#">
-                          Contact
-                      </a>
-                      <a class="text-lg text-white text-center uppercase block p-4" href="#">
-                          Login
-                      </a>
-                  </div>
+              <div class="hidden lg:block">
+                <div class="ml-10 flex items-baseline space-x-4">
+                  <a class="text-sm text-dark tracking-widest px-3 py-11 uppercase hover:text-red" href="#">
+                    Features
+                  </a>
+                  <a class="text-sm text-dark tracking-widest px-3 py-11 uppercase hover:text-red" href="#">
+                    Pricing
+                  </a>
+                  <a class="text-sm text-dark tracking-widest px-3 py-11 uppercase hover:text-red" href="#">
+                    Contact
+                  </a>
+                  <a class="text-sm text-dark tracking-widest px-3 py-11 uppercase hover:text-red" href="#">
+                    Login
+                  </a>
+                </div>
               </div>
-          </nav>
-      </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:hidden">
+          <div class="flex flex-col w-full h-full bg-dark bg-opacity-95 fixed top-0 left-0 z-50 px-8" x-cloak x-show="open" x-transition.opacity>
+            <div class="relative flex items-center justify-between h-26 lg:h-auto">
+              <div class="flex items-center w-full mt-1">
+                <a class="flex-shrink-0 mr-auto" href="./">
+                  <img src="./images/logo-bookmark-white.svg" alt="Bookmark">
+                </a>
+
+                <div class="flex lg:hidden">
+                  <button class="text-white p-6 -mr-6 focus:outline-none" @click="open = false">
+                    <span class="sr-only">Close</span><svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="16" height="15"><path d="M8 5.379L13.303.075l2.122 2.122L10.12 7.5l5.304 5.303-2.122 2.122L8 9.62l-5.303 5.304-2.122-2.122L5.88 7.5.575 2.197 2.697.075 8 5.38z"/></svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <a class="text-xl text-white text-center leading-tight uppercase block p-5 border-t border-white border-opacity-20 tracking-widest" href="#">
+              Features
+            </a>
+            <a class="text-xl text-white text-center leading-tight uppercase block p-5 border-t border-white border-opacity-20 tracking-widest" href="#">
+              Pricing
+            </a>
+            <a class="text-xl text-white text-center leading-tight uppercase block p-5 border-t border-white border-opacity-20 tracking-widest" href="#">
+              Contact
+            </a>
+            <div class="border-t border-white border-opacity-20 pt-6">
+              <a class="text-xl font-medium text-white text-center uppercase block p-2 border-2 rounded tracking-widest" href="#">
+                Login
+              </a>
+            </div>
+
+            <div class="flex justify-center items-center mt-auto py-7">
+              <a href="#" class="text-white inline-flex p-5">
+                <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z"/></svg>
+              </a>
+              <a href="#" class="text-white inline-flex p-5">
+                <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="24" height="20"><path d="M24 2.557a9.83 9.83 0 0 1-2.828.775A4.932 4.932 0 0 0 23.337.608a9.864 9.864 0 0 1-3.127 1.195A4.916 4.916 0 0 0 16.616.248c-3.179 0-5.515 2.966-4.797 6.045A13.978 13.978 0 0 1 1.671 1.149a4.93 4.93 0 0 0 1.523 6.574 4.903 4.903 0 0 1-2.229-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.935 4.935 0 0 1-2.224.084 4.928 4.928 0 0 0 4.6 3.419A9.9 9.9 0 0 1 0 17.54a13.94 13.94 0 0 0 7.548 2.212c9.142 0 14.307-7.721 13.995-14.646A10.025 10.025 0 0 0 24 2.557z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
   </header>
 
   <main>
+    <section class="py-10 pb-16">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="hero-shape -mx-1 mb-14">
+          <img src="./images/illustration-hero.svg" alt="hero" class="w-full">
+        </div>
 
-    A Simple Bookmark Manager
+        <div class="text-center text-md text-gray max-w-prose mx-auto mb-8 px-4">
+          <h1 class="text-3xl text-dark font-medium leading-snug mb-4">
+            A Simple Bookmark Manager
+          </h1>
 
-    A clean and simple interface to organize your favourite websites. Open a new 
-    browser tab and see your sites load instantly. Try it for free.
+          <p>A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites load instantly. Try it for free.</p>
+        </div>
 
-    Get it on Chrome
-    Get it on Firefox
+        
+        <div class="flex justify-center">
+          <div class="inline-flex rounded shadow-lg">
+            <a href="#" class="inline-flex items-center justify-center px-4 py-3 border-2 border-transparent text-sm font-medium rounded text-white bg-blue hover:text-blue hover:bg-white hover:border-blue">
+              Get it on Chrome
+            </a>
+          </div>
+          <div class="ml-4 inline-flex rounded shadow-lg">
+            <a href="#" class="inline-flex items-center justify-center px-4 py-3 border-2 border-transparent text-sm font-medium rounded text-dark bg-gray bg-opacity-10 hover:bg-white hover:border-dark">
+              Get it on Firefox
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    Features
+    <section class="py-16 pb-16">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="text-center text-md text-gray max-w-prose mx-auto mb-8 px-4">
+          <h1 class="text-2xl text-dark font-medium leading-snug mt-6 mb-3">
+            Features
+          </h1>
 
-    Our aim is to make it quick and easy for you to access your favourite websites. 
-    Your bookmarks sync between your devices so you can access them on the go.
+          <p>Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices so you can access them on the go.</p>
+        </div>
+      </div>
+    </section>
 
     Simple Bookmarking
     Speedy Searching

@@ -17,6 +17,7 @@ module.exports = {
         dark: 'hsl(229, 31%, 21%)',
       },
       fontSize: {
+        md: '0.9375rem',
       },
       spacing: {
         '26': '6.5rem',
