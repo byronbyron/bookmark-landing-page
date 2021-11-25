@@ -8,6 +8,10 @@ body {
 .hero-shape {
     position: relative;
 
+    @media (min-width: 768px) {
+        position: static;
+    }
+
     &::before {
         content: "";
         display: block;
@@ -19,6 +23,20 @@ body {
         bottom: -8px;
         right: -12px;
         z-index: 0;
+
+        @media (min-width: 768px) {
+            width: 36%;
+            height: 50%;
+            bottom: 15%;
+            border-radius: 40% 0% 0% 40%/50% 0% 0% 50%;
+        }
+
+        @media (min-width: 1024px) {
+            width: 38%;
+            height: 57%;
+            bottom: 8%;
+            border-radius: 30% 0% 0% 30%/50% 0% 0% 50%;
+        }
     }
 
     img {
