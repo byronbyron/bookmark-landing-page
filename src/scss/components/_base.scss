@@ -20,7 +20,7 @@ p {
 }
 
 .hero-shape--mobile {
-    background: url("/images/bg-shape-right.svg") no-repeat transparent;
+    background: url("images/bg-shape-right.svg") no-repeat transparent;
     background-size: 90%;
     background-position: right -40px top 54%;
 
@@ -36,7 +36,7 @@ p {
 
 .hero-shape--desktop {
     @media (min-width: 768px) {
-        background: url("/images/bg-shape-right.svg") no-repeat transparent;
+        background: url("images/bg-shape-right.svg") no-repeat transparent;
         background-size: 45%;
         background-position: right -40px top 64%;
     }
@@ -200,7 +200,7 @@ p {
 
 .tab-shape--mobile {
     @apply pb-20;
-    background: url("/images/bg-shape-left.svg") no-repeat transparent;
+    background: url("images/bg-shape-left.svg") no-repeat transparent;
     background-size: 102%;
     background-position: left -4rem bottom 2.5rem;
 
@@ -219,7 +219,7 @@ p {
 
 .tab-shape--desktop {
     @media (min-width: 768px) {
-        background: url("/images/bg-shape-left.svg") no-repeat transparent;
+        background: url("images/bg-shape-left.svg") no-repeat transparent;
         background-size: 42%;
         background-position: 0% 60%;
     }
