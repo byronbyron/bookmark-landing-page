@@ -19,40 +19,44 @@ p {
     @apply md:px-8;
 }
 
-.hero-shape {
-    @apply relative;
-    @apply max-w-sm;
-    @apply lg:max-w-xl;
-    @apply mx-auto;
-    @apply mb-16;
-    @apply md:mb-0;
+.hero-shape--mobile {
+    background: url("/images/bg-shape-right.svg") no-repeat transparent;
+    background-size: 90%;
+    background-position: right -40px top 54%;
 
-    &::before {
-        content: "";
-        display: block;
-        width: 31.25rem;
-        height: 12.5rem;
-        background-color: theme('colors.blue');
-        border-radius: 6.25rem 0 0 6.25rem;
-        position: absolute;
-        bottom: -1rem;
-        left: 35%;
-        z-index: 0;
-
-        @media (min-width: 1024px) {
-            width: 94rem;
-            height: 22rem;
-            border-radius: 22rem 0 0 22rem;
-            bottom: -2rem;
-        }
+    @media (min-width: 420px) {
+        background-size: 370px;
+        background-position: right -40px top 54%;        
     }
 
-    img {
-        @apply relative;
-        z-index: 1;
+    @media (min-width: 768px) {
+        background: none;
+    }
+}
 
-        @media (min-width: 768px) {
-            min-width: 125%;
+.hero-shape--desktop {
+    @media (min-width: 768px) {
+        background: url("/images/bg-shape-right.svg") no-repeat transparent;
+        background-size: 45%;
+        background-position: right -40px top 64%;
+    }
+
+    @media (min-width: 1024px) {
+        background-size: 45%;
+        background-position: right -140px top 82%;
+    }
+}
+
+.hero-image {
+    @apply mx-auto;
+    @apply max-w-sm;
+    @apply sm:max-w-md;
+    @apply md:max-w-none;
+
+    img {
+        @media (min-width: 1024px) {
+            min-width: 660px;
+            height: auto;
         }
     }
 }
@@ -68,14 +72,13 @@ p {
 }
 
 .title-sub {
-    @apply text-4xl;
+    @apply text-2xl;
     @apply text-dark;
     @apply font-medium;
-    @apply leading-snug;
-    @apply mt-6;
-    @apply mb-3;
-    @apply md:mt-0;
-    @apply md:mb-4;
+    @apply leading-none;
+    @apply mb-4;
+    @apply md:text-4xl;
+    @apply md:mb-6;
 }
 
 .btn {
@@ -114,6 +117,129 @@ p {
     &:focus {
         @apply bg-white;
         @apply border-dark;
+    }
+}
+
+.tab-group {
+    @apply border-b;
+    @apply border-gray;
+    @apply border-opacity-30;
+    @apply md:flex;
+    @apply md:justify-center;
+}
+
+.tab-item {
+    @apply border-t;
+    @apply border-gray;
+    @apply border-opacity-30;
+    @apply md:border-t-0;
+    @apply md:flex-1;
+
+    button {
+        @apply text-gray;
+        @apply transition;
+        @apply relative;
+
+        &::after {
+            content: '';
+            @apply block;
+            width: 44%;
+            height: 4px;
+            @apply absolute;
+            @apply bottom-0;
+            left: 50%;
+            transform: translateX(-50%);
+            @apply transition;
+
+            @media (min-width: 768px) {
+                left: 0;
+                width: 100%;
+                transform: none;
+            }
+        }
+    }
+
+    button:hover,
+    button:focus {
+        @apply text-red;
+    }
+
+    > .active {
+        @apply text-black;
+
+        &::after {
+            background-color: theme('colors.red');
+        }
+    }
+}
+
+.tab-content {
+    @apply py-16;
+}
+
+.tab-row {
+    @media (min-width: 768px) {
+        min-height: 452px;
+    }
+
+    @media (min-width: 1024px) {
+        min-height: 500px;
+    }
+}
+
+.tab-shape--mobile {
+    @apply pb-20;
+    background: url("/images/bg-shape-left.svg") no-repeat transparent;
+    background-size: 102%;
+    background-position: left -4rem bottom 2.5rem;
+
+    @media (min-width: 420px) {
+        background-size: 425px;
+    }
+
+    @media (min-width: 640px) {
+        background-size: 494px;
+    }
+
+    @media (min-width: 768px) {
+        background: none;
+    }
+}
+
+.tab-shape--desktop {
+    @media (min-width: 768px) {
+        background: url("/images/bg-shape-left.svg") no-repeat transparent;
+        background-size: 42%;
+        background-position: 0% 60%;
+    }
+}
+
+.tab-image {
+    @apply mx-auto;
+    @apply px-2;
+    @apply sm:max-w-md;
+    @apply md:max-w-none;
+
+    @media (min-width: 1024px) {
+        @apply ml-0;
+        @apply px-0;
+    }
+
+    img {
+        @apply w-full;
+        @apply mx-auto;
+    }
+}
+
+.tab-image-1 { max-width: 440px; }
+.tab-image-2 { max-width: 390px; }
+.tab-image-3 { max-width: 360px; }
+
+@media (min-width: 1024px) {
+    .tab-image-1,
+    .tab-image-2,
+    .tab-image-3 {
+        @apply max-w-none;
     }
 }
 

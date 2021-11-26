@@ -27839,59 +27839,62 @@ p {
   }
 }
 
-.hero-shape {
-  position: relative;
+.hero-shape--mobile {
+  background: url("/images/bg-shape-right.svg") no-repeat transparent;
+  background-size: 90%;
+  background-position: right -40px top 54%;
+}
+
+@media (min-width: 420px) {
+  .hero-shape--mobile {
+    background-size: 370px;
+    background-position: right -40px top 54%;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-shape--mobile {
+    background: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-shape--desktop {
+    background: url("/images/bg-shape-right.svg") no-repeat transparent;
+    background-size: 45%;
+    background-position: right -40px top 64%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-shape--desktop {
+    background-size: 45%;
+    background-position: right -140px top 82%;
+  }
+}
+
+.hero-image {
+  margin-left: auto;
+  margin-right: auto;
   max-width: 24rem;
 }
 
-@media (min-width: 1024px) {
-  .hero-shape {
-    max-width: 36rem;
+@media (min-width: 640px) {
+  .hero-image {
+    max-width: 28rem;
   }
-}
-
-.hero-shape {
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 4rem;
 }
 
 @media (min-width: 768px) {
-  .hero-shape {
-    margin-bottom: 0px;
+  .hero-image {
+    max-width: none;
   }
-}
-
-.hero-shape::before {
-  content: "";
-  display: block;
-  width: 31.25rem;
-  height: 12.5rem;
-  background-color: hsl(231, 69%, 60%);
-  border-radius: 6.25rem 0 0 6.25rem;
-  position: absolute;
-  bottom: -1rem;
-  left: 35%;
-  z-index: 0;
 }
 
 @media (min-width: 1024px) {
-  .hero-shape::before {
-    width: 94rem;
-    height: 22rem;
-    border-radius: 22rem 0 0 22rem;
-    bottom: -2rem;
-  }
-}
-
-.hero-shape img {
-  position: relative;
-  z-index: 1;
-}
-
-@media (min-width: 768px) {
-  .hero-shape img {
-    min-width: 125%;
+  .hero-image img {
+    min-width: 660px;
+    height: auto;
   }
 }
 
@@ -27919,24 +27922,24 @@ p {
 }
 
 .title-sub {
-  font-size: 2rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
   --tw-text-opacity: 1;
   color: hsla(229, 31%, 21%, var(--tw-text-opacity));
   font-weight: 500;
-  line-height: 1.375;
-  margin-top: 1.5rem;
-  margin-bottom: 0.75rem;
+  line-height: 1;
+  margin-bottom: 1rem;
 }
 
 @media (min-width: 768px) {
   .title-sub {
-    margin-top: 0px;
+    font-size: 2rem;
   }
 }
 
 @media (min-width: 768px) {
   .title-sub {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
   }
 }
 
@@ -28000,6 +28003,194 @@ p {
   background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
   --tw-border-opacity: 1;
   border-color: hsla(229, 31%, 21%, var(--tw-border-opacity));
+}
+
+.tab-group {
+  border-bottom-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: hsla(229, 8%, 60%, var(--tw-border-opacity));
+  --tw-border-opacity: 0.3;
+}
+
+@media (min-width: 768px) {
+  .tab-group {
+    display: flex;
+  }
+}
+
+@media (min-width: 768px) {
+  .tab-group {
+    justify-content: center;
+  }
+}
+
+.tab-item {
+  border-top-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: hsla(229, 8%, 60%, var(--tw-border-opacity));
+  --tw-border-opacity: 0.3;
+}
+
+@media (min-width: 768px) {
+  .tab-item {
+    border-top-width: 0px;
+  }
+}
+
+@media (min-width: 768px) {
+  .tab-item {
+    flex: 1 1 0%;
+  }
+}
+
+.tab-item button {
+  --tw-text-opacity: 1;
+  color: hsla(229, 8%, 60%, var(--tw-text-opacity));
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  position: relative;
+}
+
+.tab-item button::after {
+  content: "";
+  display: block;
+  width: 44%;
+  height: 4px;
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+@media (min-width: 768px) {
+  .tab-item button::after {
+    left: 0;
+    width: 100%;
+    transform: none;
+  }
+}
+
+.tab-item button:hover, .tab-item button:focus {
+  --tw-text-opacity: 1;
+  color: hsla(0, 94%, 66%, var(--tw-text-opacity));
+}
+
+.tab-item > .active {
+  --tw-text-opacity: 1;
+  color: rgba(0, 0, 0, var(--tw-text-opacity));
+}
+
+.tab-item > .active::after {
+  background-color: hsl(0, 94%, 66%);
+}
+
+.tab-content {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+@media (min-width: 768px) {
+  .tab-row {
+    min-height: 452px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .tab-row {
+    min-height: 500px;
+  }
+}
+
+.tab-shape--mobile {
+  padding-bottom: 5rem;
+  background: url("/images/bg-shape-left.svg") no-repeat transparent;
+  background-size: 102%;
+  background-position: left -4rem bottom 2.5rem;
+}
+
+@media (min-width: 420px) {
+  .tab-shape--mobile {
+    background-size: 425px;
+  }
+}
+
+@media (min-width: 640px) {
+  .tab-shape--mobile {
+    background-size: 494px;
+  }
+}
+
+@media (min-width: 768px) {
+  .tab-shape--mobile {
+    background: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .tab-shape--desktop {
+    background: url("/images/bg-shape-left.svg") no-repeat transparent;
+    background-size: 42%;
+    background-position: 0% 60%;
+  }
+}
+
+.tab-image {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+@media (min-width: 640px) {
+  .tab-image {
+    max-width: 28rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .tab-image {
+    max-width: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .tab-image {
+    margin-left: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+.tab-image img {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tab-image-1 {
+  max-width: 440px;
+}
+
+.tab-image-2 {
+  max-width: 390px;
+}
+
+.tab-image-3 {
+  max-width: 360px;
+}
+
+@media (min-width: 1024px) {
+  .tab-image-1, .tab-image-2, .tab-image-3 {
+    max-width: none;
+  }
 }
 
 .btn-shadow {
