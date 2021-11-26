@@ -227,6 +227,13 @@ p {
     }
 }
 
+@media (max-width: 767px) {
+    .hero-shape--desktop,
+    .tab-shape--desktop {
+        background-image: none !important;
+    }
+}
+
 .tab-image {
     @apply mx-auto;
     @apply px-2;
