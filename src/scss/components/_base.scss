@@ -348,6 +348,7 @@ p {
 
 .form-msg {
     @apply text-sm;
+    @apply italic;
     @apply p-0.5;
     @apply pt-2;
     @apply bg-red;
