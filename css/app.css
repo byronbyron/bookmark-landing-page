@@ -27927,7 +27927,7 @@ p {
   --tw-text-opacity: 1;
   color: hsla(229, 31%, 21%, var(--tw-text-opacity));
   font-weight: 500;
-  line-height: 1;
+  line-height: 1.375;
   margin-bottom: 1rem;
 }
 
@@ -28274,6 +28274,49 @@ p {
 
 .card-footer {
   background: url("/images/bg-dots.svg") repeat-x top left transparent;
+}
+
+.faq-item {
+  position: relative;
+  border-bottom-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: hsla(229, 8%, 60%, var(--tw-border-opacity));
+  --tw-border-opacity: 0.3;
+}
+
+.faq-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.faq-question span {
+  flex: 1 1 0%;
+}
+
+.faq-button {
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  width: 100%;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .faq-button {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+
+.faq-answer {
+  padding-top: 0.75rem;
+  padding-bottom: 1.5rem;
+}
+
+.faq-answer p {
+  line-height: 2;
 }
 
 .btn-shadow {
