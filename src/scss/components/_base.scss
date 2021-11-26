@@ -20,7 +20,7 @@ p {
 }
 
 .hero-shape--mobile {
-    background: url("images/bg-shape-right.svg") no-repeat transparent;
+    background-repeat: no-repeat;
     background-size: 90%;
     background-position: right -40px top 54%;
 
@@ -30,13 +30,14 @@ p {
     }
 
     @media (min-width: 768px) {
-        background: none;
+        background-image: none !important;
     }
 }
 
 .hero-shape--desktop {
+    background-repeat: no-repeat;
+
     @media (min-width: 768px) {
-        background: url("images/bg-shape-right.svg") no-repeat transparent;
         background-size: 45%;
         background-position: right -40px top 64%;
     }
@@ -200,7 +201,7 @@ p {
 
 .tab-shape--mobile {
     @apply pb-20;
-    background: url("images/bg-shape-left.svg") no-repeat transparent;
+    background-repeat: no-repeat;
     background-size: 102%;
     background-position: left -4rem bottom 2.5rem;
 
@@ -213,13 +214,14 @@ p {
     }
 
     @media (min-width: 768px) {
-        background: none;
+        background-image: none !important;
     }
 }
 
 .tab-shape--desktop {
+    background-repeat: no-repeat;
+
     @media (min-width: 768px) {
-        background: url("images/bg-shape-left.svg") no-repeat transparent;
         background-size: 42%;
         background-position: 0% 60%;
     }
@@ -301,7 +303,8 @@ p {
 }
 
 .card-footer {
-    background: url('/images/bg-dots.svg') repeat-x top left transparent;
+    background-repeat: repeat-x;
+    background-position: top left;
 }
 
 .faq-item {
