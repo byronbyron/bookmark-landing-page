@@ -299,14 +299,14 @@
           <!-- Question 1 -->
           <li class="faq-item" x-data="{selected:null}">
             <button type="button" class="faq-button" @click="selected !== 1 ? selected = 1 : selected = null">
-              <div class="faq-question">
+              <span class="faq-question">
                 <span>What is Bookmark?</span>
                 <svg class="text-blue transform transition" :class="{
                   'text-blue': selected !== 1,
                   'text-red': selected === 1,
                   'rotate-180': selected === 1
                 }" xmlns="http://www.w3.org/2000/svg" width="18" height="12"><path fill="none" stroke="currentColor" stroke-width="3" d="M1 1l8 8 8-8"/></svg>
-              </div>
+              </span>
             </button>
 
             <div class="relative overflow-hidden transition-all max-h-0 duration-500" style="" x-ref="container1" x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''">
@@ -320,14 +320,14 @@
           <!-- Question 2 -->
           <li class="faq-item" x-data="{selected:null}">
             <button type="button" class="faq-button" @click="selected !== 1 ? selected = 1 : selected = null">
-              <div class="faq-question">
+              <span class="faq-question">
                 <span>How can I request a new browser?</span>
                 <svg class="text-blue transform transition" :class="{
                   'text-blue': selected !== 1,
                   'text-red': selected === 1,
                   'rotate-180': selected === 1
                 }" xmlns="http://www.w3.org/2000/svg" width="18" height="12"><path fill="none" stroke="currentColor" stroke-width="3" d="M1 1l8 8 8-8"/></svg>
-              </div>
+              </span>
             </button>
 
             <div class="relative overflow-hidden transition-all max-h-0 duration-500" style="" x-ref="container1" x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''">
@@ -343,14 +343,14 @@
           <!-- Question 3 -->
           <li class="faq-item" x-data="{selected:null}">
             <button type="button" class="faq-button" @click="selected !== 1 ? selected = 1 : selected = null">
-              <div class="faq-question">
+              <span class="faq-question">
                 <span>Is there a mobile app?</span>
                 <svg class="text-blue transform transition" :class="{
                   'text-blue': selected !== 1,
                   'text-red': selected === 1,
                   'rotate-180': selected === 1
                 }" xmlns="http://www.w3.org/2000/svg" width="18" height="12"><path fill="none" stroke="currentColor" stroke-width="3" d="M1 1l8 8 8-8"/></svg>
-              </div>
+              </span>
             </button>
 
             <div class="relative overflow-hidden transition-all max-h-0 duration-500" style="" x-ref="container1" x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''">
@@ -366,14 +366,14 @@
           <!-- Question 4 -->
           <li class="faq-item" x-data="{selected:null}">
             <button type="button" class="faq-button" @click="selected !== 1 ? selected = 1 : selected = null">
-              <div class="faq-question">
+              <span class="faq-question">
                 <span>What about other Chromium browsers?</span>
                 <svg class="text-blue transform transition" :class="{
                   'text-blue': selected !== 1,
                   'text-red': selected === 1,
                   'rotate-180': selected === 1
                 }" xmlns="http://www.w3.org/2000/svg" width="18" height="12"><path fill="none" stroke="currentColor" stroke-width="3" d="M1 1l8 8 8-8"/></svg>
-              </div>
+              </span>
             </button>
 
             <div class="relative overflow-hidden transition-all max-h-0 duration-500" style="" x-ref="container1" x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''">
