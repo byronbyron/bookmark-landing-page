@@ -397,3 +397,19 @@ p {
         color: hsl(228, 45%, 44%);
     }
 }
+
+.fade-1 {
+    animation: .5s .25s fade backwards ease-out;
+}
+
+.fade-2 {
+    animation: .5s .5s fade backwards ease-out;
+}
+
+@keyframes fade {
+    from {
+        transform: translateY(.25em);
+        opacity: 0
+    }
+
+}
