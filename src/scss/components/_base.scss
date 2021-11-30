@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap');
+
 body {
     font-family: 'Rubik', sans-serif;
     font-size: 1rem;
@@ -45,9 +47,16 @@ p {
 .attribution {
     font-size: 11px;
     text-align: center;
+    color: hsl(0 0% 100% / 0.8);
 
     a {
-        color: hsl(228, 45%, 44%);
+        text-decoration: underline;
+        color: hsl(0 0% 100% / 0.8);
+
+        &:hover,
+        &:focus {
+            color: white;
+        }
     }
 }
 
@@ -62,7 +71,6 @@ p {
 @keyframes fade {
     from {
         transform: translateY(.25em);
-        opacity: 0
+        opacity: 0;
     }
-
 }
