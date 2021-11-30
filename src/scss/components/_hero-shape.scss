@@ -1,0 +1,49 @@
+.hero-shape--mobile {
+    background-repeat: no-repeat;
+    background-size: 90%;
+    background-position: right -40px top 54%;
+
+    @media (min-width: 420px) {
+        background-size: 370px;
+        background-position: right -40px top 54%;        
+    }
+
+    @media (min-width: 768px) {
+        background-image: none !important;
+    }
+}
+
+.hero-shape--desktop {
+    background-repeat: no-repeat;
+
+    @media (min-width: 768px) {
+        background-size: 45%;
+        background-position: right -40px top 64%;
+    }
+
+    @media (min-width: 1024px) {
+        background-size: 45%;
+        background-position: right -140px top 82%;
+    }
+}
+
+.hero-image {
+    @apply mx-auto;
+    @apply max-w-sm;
+    @apply sm:max-w-md;
+    @apply md:max-w-none;
+
+    img {
+        @media (min-width: 1024px) {
+            min-width: 660px;
+            height: auto;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .hero-shape--desktop,
+    .tab-shape--desktop {
+        background-image: none !important;
+    }
+}

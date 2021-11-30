@@ -1,0 +1,34 @@
+.faq-item {
+    @apply relative;
+    @apply border-b;
+    @apply border-gray;
+    @apply border-opacity-30;
+}
+
+.faq-question {
+    @apply flex;
+    @apply items-center;
+    @apply justify-between;
+
+    span {
+        @apply flex-1;
+    }
+}
+
+.faq-button {
+    @apply text-md;
+    @apply leading-normal;
+    @apply w-full;
+    @apply py-5;
+    @apply text-left;
+    @apply md:text-lg;
+}
+
+.faq-answer {
+    @apply pt-3;
+    @apply pb-6;
+
+    p {
+        @apply leading-loose;
+    }
+}

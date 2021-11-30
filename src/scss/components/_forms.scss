@@ -1,0 +1,31 @@
+[aria-invalid="true"] {
+    &,
+    &:focus {
+        @apply border-red;
+    }
+}
+
+.form-msg {
+    @apply text-sm;
+    @apply italic;
+    @apply p-0.5;
+    @apply pt-2;
+    @apply bg-red;
+    @apply -mt-2;
+    @apply rounded-br;
+    @apply rounded-bl;
+    @apply border-red;
+}
+
+.email-input {
+    @apply relative;
+}
+
+.msg-wrapper {
+    @apply relative;
+    @apply flex-1;
+}
+
+.btn-form {
+    height: 50px;
+}

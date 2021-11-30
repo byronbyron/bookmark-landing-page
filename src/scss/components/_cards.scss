@@ -1,0 +1,51 @@
+.card-group {
+    @apply py-16;
+    @apply pb-16;
+    @apply flex;
+    @apply flex-col;
+    @apply items-center;
+    @apply md:flex-row;
+    @apply md:items-start;
+    @apply md:justify-center;
+    @apply md:space-x-6;
+    @apply lg:space-x-8;
+}
+
+.card {
+    width: 280px;
+    height: 370px;
+    @apply rounded-2xl;
+    @apply text-center;
+    @apply mb-12;
+    @apply flex;
+    @apply flex-col;
+    box-shadow: 0 8px 12px -2px rgb(83 104 213 / 25%);
+}
+
+@media (min-width: 768px) {
+    .card:nth-child(2) {
+        @apply mt-10;
+    }
+    
+    .card:nth-child(3) {
+        @apply mt-20;
+    }
+}
+
+.card-body {
+    @apply p-6;
+    @apply flex-1;
+    @apply flex;
+    @apply flex-col;
+    @apply justify-center;
+}
+
+.card-footer {
+    @apply px-6;
+    @apply py-7;
+}
+
+.card-footer {
+    background-repeat: repeat-x;
+    background-position: top left;
+}
